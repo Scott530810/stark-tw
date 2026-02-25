@@ -10,16 +10,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Desktop Nav */}
-      <nav className="hidden lg:flex items-center justify-between px-[6vw] pt-10 pb-6">
+      <nav className="hidden lg:flex items-center justify-between px-[4vw] xl:px-[5vw] pt-7 pb-6">
         {/* Left links */}
-        <div className="flex items-center gap-10">
-          <Link href="/products/stark-varg-ex" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
+        <div className="flex items-center gap-12">
+          <Link href="/products/stark-varg-ex" className="text-base text-white hover:text-white/70 tracking-[0.3em] uppercase font-normal transition-colors">
             EX
           </Link>
-          <Link href="/products/stark-varg" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
+          <Link href="/products/stark-varg" className="text-base text-white hover:text-white/70 tracking-[0.3em] uppercase font-normal transition-colors">
             MX 1.2
           </Link>
-          <Link href="/products/stark-varg-sm" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
+          <Link href="/products/stark-varg-sm" className="text-base text-white hover:text-white/70 tracking-[0.3em] uppercase font-normal transition-colors">
             SM
           </Link>
         </div>
@@ -29,18 +29,18 @@ export default function Header() {
           <Image
             src="https://assets.starkfuture.com/frontend-assets/common/new_logo.png"
             alt="Stark Future"
-            width={36}
-            height={36}
-            className="h-9 w-auto"
+            width={44}
+            height={44}
+            className="h-11 w-auto"
           />
         </Link>
 
         {/* Right links */}
-        <div className="flex items-center gap-10">
-          <Link href="/about" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
+        <div className="flex items-center gap-12">
+          <Link href="/about" className="text-base text-white hover:text-white/70 tracking-[0.3em] uppercase font-normal transition-colors">
             關於
           </Link>
-          <Link href="/contact" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
+          <Link href="/contact" className="text-base text-white hover:text-white/70 tracking-[0.3em] uppercase font-normal transition-colors">
             聯繫
           </Link>
         </div>

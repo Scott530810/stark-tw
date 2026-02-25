@@ -80,29 +80,28 @@ export default function HomePage() {
           <source src="https://assets.starkfuture.com/frontend-assets/home/home-main-hero-video-desktop-2025.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
-        <div className="relative z-10 mb-[22vh] md:mb-[20vh] text-center">
+        <div className="relative z-10 mb-[8vh] md:mb-[10vh] text-center">
           <h1
-            className="text-[2rem] md:text-[2.8rem] lg:text-[3.2rem] font-normal tracking-[0.04em] uppercase mb-10 text-white leading-[1.2]"
-            style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 400 }}
+            className="text-[2.2rem] md:text-[3rem] lg:text-[3.5rem] font-light italic tracking-[0.02em] uppercase mb-12 text-white leading-[1.15]"
           >
             Ride Anywhere,<br />Anytime
           </h1>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-5">
             <Link
               href="/products/stark-varg-sm"
-              className="px-9 md:px-12 py-3.5 bg-[#444]/70 backdrop-blur-sm text-white text-[15px] font-normal rounded-full hover:bg-[#555]/70 transition-colors tracking-[0.12em]"
+              className="min-w-[160px] px-10 py-4 bg-white/95 text-black text-base font-medium rounded-full hover:bg-white transition-colors tracking-wide text-center"
             >
               Supermoto
             </Link>
             <Link
               href="/products/stark-varg"
-              className="px-9 md:px-12 py-3.5 bg-[#444]/70 backdrop-blur-sm text-white text-[15px] font-normal rounded-full hover:bg-[#555]/70 transition-colors tracking-[0.12em]"
+              className="min-w-[160px] px-10 py-4 bg-white/20 backdrop-blur-md text-white text-base font-medium rounded-full hover:bg-white/30 transition-colors tracking-wide border border-white/30 text-center"
             >
               Motocross
             </Link>
             <Link
               href="/products/stark-varg-ex"
-              className="px-9 md:px-12 py-3.5 bg-[#444]/70 backdrop-blur-sm text-white text-[15px] font-normal rounded-full hover:bg-[#555]/70 transition-colors tracking-[0.12em]"
+              className="min-w-[160px] px-10 py-4 bg-white/20 backdrop-blur-md text-white text-base font-medium rounded-full hover:bg-white/30 transition-colors tracking-wide border border-white/30 text-center"
             >
               Enduro
             </Link>
