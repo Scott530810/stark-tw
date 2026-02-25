@@ -203,7 +203,7 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-6xl font-bold mb-8">準備好了嗎？</h2>
           <Link
             href="/contact"
-            className="inline-block px-12 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-colors text-lg"
+            className="inline-block min-w-[200px] px-12 py-5 bg-white/95 text-black text-lg font-medium rounded-full hover:bg-white transition-colors tracking-wide text-center"
           >
             聯繫我們
           </Link>

@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Desktop Nav */}
-      <nav className="hidden lg:flex items-center justify-between px-[4vw] xl:px-[5vw] pt-7 pb-6">
+      <nav className="hidden lg:flex items-center justify-between px-[8vw] xl:px-[10vw] pt-7 pb-6">
         {/* Left links */}
         <div className="flex items-center gap-12">
           <Link href="/products/stark-varg-ex" className="text-base text-white hover:text-white/70 tracking-[0.3em] uppercase font-normal transition-colors">
