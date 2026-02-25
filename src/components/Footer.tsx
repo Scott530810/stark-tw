@@ -3,19 +3,14 @@ import Image from "next/image";
 
 const footerLinks = {
   車款: [
-    { label: "VARG MX 1.2", href: "/products/stark-varg" },
     { label: "VARG EX", href: "/products/stark-varg-ex" },
+    { label: "VARG MX 1.2", href: "/products/stark-varg" },
     { label: "VARG SM", href: "/products/stark-varg-sm" },
   ],
-  支援: [
-    { label: "支援中心", href: "/support" },
-    { label: "技術教學", href: "/tutorials" },
-    { label: "零件配件", href: "/parts" },
-  ],
-  公司: [
-    { label: "關於我們", href: "/about" },
+  資訊: [
+    { label: "關於 Stark", href: "/about" },
     { label: "聯繫我們", href: "/contact" },
-    { label: "媒體資源", href: "/press" },
+    { label: "Stark Future 官網", href: "https://starkfuture.com" },
   ],
 };
 

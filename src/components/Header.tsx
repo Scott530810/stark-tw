@@ -13,10 +13,7 @@ const navLinks = [
       { label: "VARG SM", href: "/products/stark-varg-sm" },
     ],
   },
-  { label: "SAM 智能系統", href: "/sam" },
-  { label: "零件配件", href: "/parts" },
-  { label: "支援服務", href: "/support" },
-  { label: "關於我們", href: "/about" },
+  { label: "關於 Stark", href: "/about" },
   { label: "聯繫我們", href: "/contact" },
 ];
 

@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const colors = [
-  { name: "Stark 紅", color: "#cc0000", slug: "red" },
-  { name: "戰鬥灰", color: "#6b6b6b", slug: "gray" },
+  { name: "Stark Red", color: "#cc0000", slug: "red" },
+  { name: "Combat Gray", color: "#6b6b6b", slug: "gray" },
 ];
 
 const heroImages = [
@@ -19,28 +19,28 @@ const heroImages = [
 const specs = {
   動力系統: [
     { label: "馬達類型", value: "永磁同步馬達 (PMSM)" },
-    { label: "最大馬力", value: "80 hp (60 kW)" },
-    { label: "最大扭力", value: "692 Nm (後輪)" },
-    { label: "電池容量", value: "6 kWh" },
-    { label: "充電時間", value: "1-6 小時 (視充電器)" },
-    { label: "續航力", value: "最高 6 小時 (依使用模式)" },
+    { label: "最大馬力", value: "80 HP (60 kW)" },
+    { label: "可調範圍", value: "10-80 HP" },
+    { label: "後輪扭力", value: "938 Nm" },
+    { label: "電池容量", value: "6.5 kWh" },
+    { label: "充電時間", value: "約 2 小時 (240V) / 3.5 小時 (120V)" },
+    { label: "充電器", value: "3.3 kW, 16A, 120/240V" },
+    { label: "騎乘時間", value: "最長約 6 小時" },
   ],
   底盤懸吊: [
-    { label: "車架", value: "鍛造鋁合金" },
-    { label: "前叉", value: "WP XACT 48mm 倒叉" },
-    { label: "後避震", value: "WP XACT" },
-    { label: "前煞車", value: "Brembo 4 活塞卡鉗" },
-    { label: "後煞車", value: "Brembo 單活塞卡鉗" },
+    { label: "車架", value: "鋁合金" },
+    { label: "前叉", value: "48mm 閉合式彈簧前叉，壓縮/回彈可調" },
+    { label: "前叉行程", value: "310 mm" },
+    { label: "前煞車碟", value: "260 mm" },
+    { label: "後煞車碟", value: "220 mm" },
     { label: "前輪", value: "21 吋" },
     { label: "後輪", value: "18 吋" },
   ],
   車輛資訊: [
-    { label: "整備重量", value: "110 kg" },
-    { label: "座高", value: "935 mm" },
-    { label: "最高速度", value: "150 km/h" },
-    { label: "道路合法", value: "✅ 歐盟認證" },
-    { label: "AVAS 低速警示", value: "✅ 標準配備" },
-    { label: "燈具", value: "LED 全車燈組" },
+    { label: "整備重量", value: "118 kg" },
+    { label: "道路合法", value: "✅" },
+    { label: "LED 燈具", value: "✅" },
+    { label: "AVAS 低速警示", value: "✅" },
   ],
 };
 
@@ -77,7 +77,7 @@ export default function VargEXPage() {
             <div>
               <p className="text-sm text-white/50 mb-2">Stark Future</p>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">VARG EX</h1>
-              <p className="text-xl text-white/60 mt-3">全球首款道路合法電動越野車</p>
+              <p className="text-lg text-white/60 mt-3">The ultimate road-legal electric enduro bike</p>
             </div>
             <div className="flex gap-4">
               <Link
@@ -86,16 +86,9 @@ export default function VargEXPage() {
               >
                 立即洽詢
               </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-3 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
-              >
-                預約試乘
-              </Link>
             </div>
           </div>
 
-          {/* Image selector dots */}
           <div className="flex gap-2 mt-8">
             {heroImages.map((_, i) => (
               <button
@@ -110,40 +103,41 @@ export default function VargEXPage() {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">為冒險而生</h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto">
-              VARG EX 是全球第一款取得歐盟道路合法認證的電動越野車。擁有與 VARG MX 相同的賽道級性能，加上完整的道路照明設備、AVAS 低速警示系統，讓你從林道到公路一路暢行。
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 bg-[#1c1c1e] rounded-2xl text-center">
-              <div className="text-5xl font-bold mb-2">80<span className="text-lg text-white/50">hp</span></div>
-              <p className="text-white/40">最大馬力</p>
-              <p className="text-sm text-white/30 mt-2">自主研發永磁同步馬達</p>
-            </div>
-            <div className="p-8 bg-[#1c1c1e] rounded-2xl text-center">
-              <div className="text-5xl font-bold mb-2">110<span className="text-lg text-white/50">kg</span></div>
-              <p className="text-white/40">整備重量</p>
-              <p className="text-sm text-white/30 mt-2">含電池與所有道路設備</p>
-            </div>
-            <div className="p-8 bg-[#1c1c1e] rounded-2xl text-center">
-              <div className="text-5xl font-bold mb-2">0<span className="text-lg text-white/50">排放</span></div>
-              <p className="text-white/40">零碳排放</p>
-              <p className="text-sm text-white/30 mt-2">幾乎零噪音騎乘</p>
-            </div>
+      {/* Key Specs */}
+      <section className="py-20 px-6 bg-[#1c1c1e]">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { value: "80", unit: "HP", label: "最大馬力" },
+              { value: "938", unit: "Nm", label: "後輪扭力" },
+              { value: "118", unit: "kg", label: "整備重量" },
+              { value: "6.5", unit: "kWh", label: "電池容量" },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold">{s.value}<span className="text-base text-white/50 ml-1">{s.unit}</span></div>
+                <p className="text-sm text-white/40 mt-2">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Color Selector + Product Gallery */}
+      {/* Description */}
+      <section className="py-24 px-6 bg-[#0a0a0a]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">道路合法電動越野車</h2>
+          <p className="text-white/50 text-lg leading-relaxed">
+            Experience the Stark VARG EX, the ultimate road-legal electric enduro bike.
+            Lightweight and agile, with customizable power (10-80 HP), emission-free performance,
+            and low maintenance. Perfect for trails, roads, and adventures.
+          </p>
+        </div>
+      </section>
+
+      {/* Color Selector */}
       <section className="py-24 px-6 bg-[#111]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">選擇你的配色</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">車色</h2>
           <div className="flex justify-center gap-4 mb-12">
             {colors.map((c) => (
               <button
@@ -155,21 +149,17 @@ export default function VargEXPage() {
                     : "border-white/20 hover:border-white/40"
                 }`}
               >
-                <span
-                  className="w-4 h-4 rounded-full"
-                  style={{ backgroundColor: c.color }}
-                />
+                <span className="w-4 h-4 rounded-full" style={{ backgroundColor: c.color }} />
                 <span className="text-sm">{c.name}</span>
               </button>
             ))}
           </div>
 
-          {/* Product carousel */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((n) => (
-              <div key={n} className="relative aspect-square rounded-xl overflow-hidden">
+              <div key={n} className="relative aspect-square rounded-xl overflow-hidden bg-[#1c1c1e]">
                 <Image
-                  src={`https://assets.starkfuture.com/frontend-assets/ex-product/product_carousel_${activeColor}_${n}_desktop.webp`}
+                  src={`https://assets.starkfuture.com/frontend-assets/ex-product/product_carousel_${activeColor}_0${n}_desktop.webp`}
                   alt={`VARG EX ${activeColor} view ${n}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
@@ -192,9 +182,9 @@ export default function VargEXPage() {
                 </h3>
                 <div className="space-y-4">
                   {items.map((item) => (
-                    <div key={item.label} className="flex justify-between">
+                    <div key={item.label} className="flex justify-between gap-4">
                       <span className="text-sm text-white/40">{item.label}</span>
-                      <span className="text-sm font-medium">{item.value}</span>
+                      <span className="text-sm font-medium text-right">{item.value}</span>
                     </div>
                   ))}
                 </div>
@@ -207,7 +197,7 @@ export default function VargEXPage() {
       {/* Gallery */}
       <section className="py-24 px-6 bg-[#111]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">實車圖集</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">圖集</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {galleryImages.map((img, i) => (
               <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden">
@@ -226,9 +216,9 @@ export default function VargEXPage() {
       {/* CTA */}
       <section className="py-24 px-6 bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">對 VARG EX 有興趣？</h2>
+          <h2 className="text-4xl font-bold mb-6">對 VARG EX 有興趣？</h2>
           <p className="text-white/50 text-lg mb-8">
-            聯繫 Lapspeed Trading — Stark Future 台灣獨家代理，我們將為你提供完整的購車資訊、價格方案及試乘安排。
+            Lapspeed Trading — Stark Future 台灣獨家代理
           </p>
           <Link
             href="/contact"
