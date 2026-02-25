@@ -67,10 +67,21 @@ const features = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero - Full Screen Carousel */}
-      <ImageCarousel images={heroImages} alt="Stark VARG" interval={6000}>
-        <div className="flex flex-col justify-end h-full pb-24 px-6">
-          <div className="max-w-7xl mx-auto w-full">
+      {/* Hero - Full Screen Video */}
+      <section className="relative h-screen flex items-end overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="https://assets.starkfuture.com/frontend-assets/ex-product/hero_01_desktop.webp"
+        >
+          <source src="https://assets.starkfuture.com/frontend-assets/home/home-main-hero-video-desktop-2025.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
+        <div className="relative z-10 pb-24 px-6 w-full">
+          <div className="max-w-7xl mx-auto">
             <p className="text-base md:text-lg text-white/60 mb-3 tracking-[0.3em] uppercase font-light">
               Stark Future 台灣
             </p>
@@ -96,7 +107,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </ImageCarousel>
+      </section>
 
       {/* Specs Bar */}
       <section className="py-20 md:py-28 bg-[#0a0a0a]">

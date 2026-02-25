@@ -140,6 +140,20 @@ export default function VargSMPage() {
         </AnimatedSection>
       </section>
 
+      {/* Video Section */}
+      <section className="relative h-screen">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="https://assets.starkfuture.com/frontend-assets/sm-product/hero_01_desktop.webp"
+        >
+          <source src="https://assets.starkfuture.com/frontend-assets/sm-product/crawl_mode_video_loop_desktop.mp4" type="video/mp4" />
+        </video>
+      </section>
+
       {/* Feature Sections */}
       {featureSections.map((section) => (
         <section key={section.title} className="relative min-h-screen flex items-center">
