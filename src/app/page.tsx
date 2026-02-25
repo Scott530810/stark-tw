@@ -80,29 +80,28 @@ export default function HomePage() {
           <source src="https://assets.starkfuture.com/frontend-assets/home/home-main-hero-video-desktop-2025.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
-        <div className="relative z-10 pb-16 md:pb-24 text-center">
+        <div className="relative z-10 mb-[12vh] md:mb-[14vh] text-center">
           <h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[0.1em] uppercase mb-10 text-white"
-            style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}
+            className="text-3xl md:text-[3.2rem] lg:text-[3.8rem] font-semibold tracking-[0.08em] uppercase mb-8 text-white leading-tight"
           >
             Ride Anywhere,<br />Anytime
           </h1>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/products/stark-varg-sm"
-              className="px-8 md:px-10 py-3 bg-white/90 text-black font-medium rounded-full hover:bg-white transition-colors tracking-wider text-sm"
+              className="px-7 md:px-9 py-2.5 bg-[#3a3a3a]/80 backdrop-blur-sm text-white text-sm font-medium rounded-full hover:bg-[#4a4a4a]/80 transition-colors tracking-wider"
             >
               Supermoto
             </Link>
             <Link
               href="/products/stark-varg"
-              className="px-8 md:px-10 py-3 bg-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/30 transition-colors tracking-wider text-sm border border-white/10"
+              className="px-7 md:px-9 py-2.5 bg-[#3a3a3a]/80 backdrop-blur-sm text-white text-sm font-medium rounded-full hover:bg-[#4a4a4a]/80 transition-colors tracking-wider"
             >
               Motocross
             </Link>
             <Link
               href="/products/stark-varg-ex"
-              className="px-8 md:px-10 py-3 bg-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/30 transition-colors tracking-wider text-sm border border-white/10"
+              className="px-7 md:px-9 py-2.5 bg-[#3a3a3a]/80 backdrop-blur-sm text-white text-sm font-medium rounded-full hover:bg-[#4a4a4a]/80 transition-colors tracking-wider"
             >
               Enduro
             </Link>
