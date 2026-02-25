@@ -67,8 +67,8 @@ const features = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero - Full Screen Video */}
-      <section className="relative h-screen flex items-end overflow-hidden">
+      {/* Hero - Full Screen Video (matching original layout) */}
+      <section className="relative h-screen flex flex-col items-center justify-end overflow-hidden">
         <video
           autoPlay
           muted
@@ -79,32 +79,33 @@ export default function HomePage() {
         >
           <source src="https://assets.starkfuture.com/frontend-assets/home/home-main-hero-video-desktop-2025.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
-        <div className="relative z-10 pb-24 px-6 w-full">
-          <div className="max-w-7xl mx-auto">
-            <p className="text-base md:text-lg text-white/60 mb-3 tracking-[0.3em] uppercase font-light">
-              Stark Future 台灣
-            </p>
-            <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-4">
-              STARK VARG
-            </h1>
-            <p className="text-lg md:text-2xl text-white/70 mb-8 max-w-2xl font-light">
-              Ride Anywhere, Anytime
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/products/stark-varg-ex"
-                className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition-all text-center"
-              >
-                探索車款
-              </Link>
-              <Link
-                href="/contact"
-                className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all text-center"
-              >
-                聯繫我們
-              </Link>
-            </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
+        <div className="relative z-10 pb-16 md:pb-24 text-center">
+          <h1
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-[0.1em] uppercase mb-10 text-white"
+            style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}
+          >
+            Ride Anywhere,<br />Anytime
+          </h1>
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <Link
+              href="/products/stark-varg-sm"
+              className="px-8 md:px-10 py-3 bg-white/90 text-black font-medium rounded-full hover:bg-white transition-colors tracking-wider text-sm"
+            >
+              Supermoto
+            </Link>
+            <Link
+              href="/products/stark-varg"
+              className="px-8 md:px-10 py-3 bg-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/30 transition-colors tracking-wider text-sm border border-white/10"
+            >
+              Motocross
+            </Link>
+            <Link
+              href="/products/stark-varg-ex"
+              className="px-8 md:px-10 py-3 bg-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/30 transition-colors tracking-wider text-sm border border-white/10"
+            >
+              Enduro
+            </Link>
           </div>
         </div>
       </section>

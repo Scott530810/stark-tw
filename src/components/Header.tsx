@@ -4,122 +4,100 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const navLinks = [
-  {
-    label: "車款",
-    children: [
-      { label: "VARG MX 1.2", href: "/products/stark-varg" },
-      { label: "VARG EX", href: "/products/stark-varg-ex" },
-      { label: "VARG SM", href: "/products/stark-varg-sm" },
-    ],
-  },
-  { label: "關於 Stark", href: "/about" },
-  { label: "聯繫我們", href: "/contact" },
-];
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Desktop Nav */}
+      <nav className="hidden lg:flex items-center justify-between px-10 py-5 bg-gradient-to-b from-black/50 to-transparent">
+        {/* Left links */}
+        <div className="flex items-center gap-10">
+          <Link href="/products/stark-varg-ex" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+            EX
+          </Link>
+          <Link href="/products/stark-varg" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+            MX 1.2
+          </Link>
+          <Link href="/products/stark-varg-sm" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+            SM
+          </Link>
+        </div>
+
+        {/* Center Logo */}
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2">
           <Image
             src="https://assets.starkfuture.com/frontend-assets/common/new_logo.png"
             alt="Stark Future"
-            width={120}
-            height={30}
-            className="h-7 w-auto"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
           />
-          <span className="text-xs text-white/60 border-l border-white/20 pl-3">台灣</span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.children ? (
-              <div
-                key={link.label}
-                className="relative"
-                onMouseEnter={() => setHoveredMenu(link.label)}
-                onMouseLeave={() => setHoveredMenu(null)}
-              >
-                <button className="text-sm text-white/80 hover:text-white transition-colors">
-                  {link.label}
-                </button>
-                {hoveredMenu === link.label && (
-                  <div className="absolute top-full left-0 mt-2 bg-black/95 backdrop-blur-md border border-white/10 rounded-lg py-2 min-w-[180px]">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href!}
-                className="text-sm text-white/80 hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
-        </nav>
+        {/* Right links */}
+        <div className="flex items-center gap-10">
+          <Link href="/about" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+            關於
+          </Link>
+          <Link href="/contact" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+            聯繫
+          </Link>
+        </div>
+      </nav>
 
-        {/* Mobile menu button */}
+      {/* Mobile Nav */}
+      <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-gradient-to-b from-black/50 to-transparent">
+        <Link href="/">
+          <Image
+            src="https://assets.starkfuture.com/frontend-assets/common/new_logo.png"
+            alt="Stark Future"
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+          />
+        </Link>
         <button
-          className="lg:hidden text-white"
+          className="text-white p-1"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/10">
-          <div className="px-6 py-4 space-y-4">
-            {navLinks.map((link) =>
-              link.children ? (
-                <div key={link.label}>
-                  <p className="text-xs text-white/40 uppercase mb-2">{link.label}</p>
-                  {link.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="block py-2 text-white/80 hover:text-white"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              ) : (
-                <Link
-                  key={link.label}
-                  href={link.href!}
-                  className="block py-2 text-white/80 hover:text-white"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+        <div className="lg:hidden fixed inset-0 top-0 bg-black/95 backdrop-blur-md z-40">
+          <div className="flex justify-end p-5">
+            <button className="text-white" onClick={() => setMenuOpen(false)}>
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col items-center gap-8 pt-16">
+            {[
+              { label: "EX", href: "/products/stark-varg-ex" },
+              { label: "MX 1.2", href: "/products/stark-varg" },
+              { label: "SM", href: "/products/stark-varg-sm" },
+              { label: "關於", href: "/about" },
+              { label: "聯繫我們", href: "/contact" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-2xl text-white/80 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
