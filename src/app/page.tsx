@@ -17,7 +17,7 @@ const products = [
   {
     name: "VARG MX 1.2",
     subtitle: "The fastest electric motocross bike in the world",
-    description: "純越野競技車款。80 HP 的純電越野車，110 kg 整備重量，前 21\" 後 19\" 輪組。",
+    description: "純越野競技車款。80 HP 的純電越野車，118 kg 整備重量，前 21\" 後 19\" 輪組。",
     image: "https://assets.starkfuture.com/frontend-assets/mx1.2/hero_01_desktop.webp",
     href: "/products/stark-varg",
     tag: "越野競技",
@@ -25,7 +25,7 @@ const products = [
   {
     name: "VARG SM",
     subtitle: "The ultimate road-legal electric supermoto",
-    description: "電動滑胎車。將賽道性能帶上街道，17\" 輪組，道路合法認證。",
+    description: "電動滑胎車。124 kg 整備重量，17\" 輪組，320mm Brembo 前煞車，道路合法認證。",
     image: "https://assets.starkfuture.com/frontend-assets/sm-product/hero_01_desktop.webp",
     href: "/products/stark-varg-sm",
     tag: "滑胎街車",
@@ -42,7 +42,7 @@ const heroImages = [
 const specs = [
   { value: "80", unit: "HP", label: "最大馬力" },
   { value: "938", unit: "Nm", label: "後輪扭力" },
-  { value: "110", unit: "kg", label: "最輕整備重量" },
+  { value: "118", unit: "kg", label: "整備重量 (EX)" },
   { value: "7.2", unit: "kWh", label: "電池容量" },
 ];
 
@@ -89,7 +89,7 @@ export default function HomePage() {
               STARK VARG
             </h1>
             <p className="text-lg md:text-2xl text-white/70 mb-8 max-w-2xl font-light">
-              The most powerful electric motorcycle in the world
+              Ride Anywhere, Anytime
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
