@@ -10,16 +10,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Desktop Nav */}
-      <nav className="hidden lg:flex items-center justify-between px-14 pt-8 pb-6">
+      <nav className="hidden lg:flex items-center justify-between px-[6vw] pt-10 pb-6">
         {/* Left links */}
         <div className="flex items-center gap-10">
-          <Link href="/products/stark-varg-ex" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+          <Link href="/products/stark-varg-ex" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
             EX
           </Link>
-          <Link href="/products/stark-varg" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+          <Link href="/products/stark-varg" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
             MX 1.2
           </Link>
-          <Link href="/products/stark-varg-sm" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+          <Link href="/products/stark-varg-sm" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
             SM
           </Link>
         </div>
@@ -37,10 +37,10 @@ export default function Header() {
 
         {/* Right links */}
         <div className="flex items-center gap-10">
-          <Link href="/about" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+          <Link href="/about" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
             關於
           </Link>
-          <Link href="/contact" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
+          <Link href="/contact" className="text-[15px] text-white/90 hover:text-white tracking-[0.25em] uppercase font-medium transition-colors">
             聯繫
           </Link>
         </div>
