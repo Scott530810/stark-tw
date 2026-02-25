@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Desktop Nav */}
-      <nav className="hidden lg:flex items-center justify-between px-12 py-6 bg-gradient-to-b from-black/40 to-transparent">
+      <nav className="hidden lg:flex items-center justify-between px-14 pt-8 pb-6">
         {/* Left links */}
         <div className="flex items-center gap-10">
           <Link href="/products/stark-varg-ex" className="text-sm text-white/90 hover:text-white tracking-[0.2em] uppercase font-medium transition-colors">
@@ -29,9 +29,9 @@ export default function Header() {
           <Image
             src="https://assets.starkfuture.com/frontend-assets/common/new_logo.png"
             alt="Stark Future"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
+            width={36}
+            height={36}
+            className="h-9 w-auto"
           />
         </Link>
 
