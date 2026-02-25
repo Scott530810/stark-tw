@@ -43,7 +43,7 @@ const specs = [
   { value: "80", unit: "HP", label: "最大馬力" },
   { value: "938", unit: "Nm", label: "後輪扭力" },
   { value: "110", unit: "kg", label: "最輕整備重量" },
-  { value: "6.5", unit: "kWh", label: "電池容量" },
+  { value: "7.2", unit: "kWh", label: "電池容量" },
 ];
 
 const features = [
@@ -59,7 +59,7 @@ const features = [
   },
   {
     title: "超長續航力",
-    desc: "6.5 kWh 電池搭配高效能馬達，最長可騎乘約 6 小時。240V 充電約 2 小時充滿。",
+    desc: "7.2 kWh 電池搭配高效能馬達，最長可騎乘約 6 小時。240V 充電約 2 小時充滿。",
     image: "https://assets.starkfuture.com/frontend-assets/mx1.2/carousel_01_slide_01_desktop.webp",
   },
 ];

@@ -46,7 +46,7 @@ const specs = {
     { label: "最大馬力", value: "80 HP (60 kW)" },
     { label: "可調範圍", value: "10-80 HP" },
     { label: "後輪扭力", value: "938 Nm" },
-    { label: "電池容量", value: "6.5 kWh" },
+    { label: "電池容量", value: "7.2 kWh" },
     { label: "充電時間", value: "約 2 小時 (240V) / 3.5 小時 (120V)" },
     { label: "充電器", value: "3.3 kW, 16A, 120/240V" },
     { label: "騎乘時間", value: "最長約 6 小時" },
@@ -117,7 +117,7 @@ export default function VargEXPage() {
               { value: "80", unit: "HP", label: "最大馬力" },
               { value: "938", unit: "Nm", label: "後輪扭力" },
               { value: "118", unit: "kg", label: "整備重量" },
-              { value: "6.5", unit: "kWh", label: "電池容量" },
+              { value: "7.2", unit: "kWh", label: "電池容量" },
             ].map((s, i) => (
               <AnimatedSection key={s.label} delay={i * 0.1} className="text-center">
                 <div className="text-5xl md:text-7xl font-bold tracking-tight">
